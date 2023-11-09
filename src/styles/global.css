@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  :root[data-theme="light"] {
+    --color-bgColor: 221 230 237;
+    --color-contentColor: 34 40 49;
+    --sun-fill: rgb(0, 0, 0);
+    --moon-fill: transparent;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bgColor: 34 40 49;
+      --color-contentColor: 238 238 238;
+      --sun-fill: transparent;
+      --moon-fill: rgb(255, 255, 255);
+    }
+  }
+  :root[data-theme="dark"] {
+    --color-bgColor: 34 40 49;
+    --color-contentColor: 238 238 238;
+    --sun-fill: transparent;
+    --moon-fill: rgb(255, 255, 255);
+  }
+}
